@@ -97,6 +97,7 @@ body {
     z-index: 10;
     padding: 12px 25px;
     overflow: hidden;
+    transition: opacity .3s ease-in;
 }
 
 .slider__card h1 {
@@ -110,7 +111,7 @@ body {
 
 .slider .overview {
     position: absolute;
-    /*overflow: auto;*/
+    overflow: hidden;
     /*background-color: #fff;*/
     top: 0;
     right: 0;
@@ -119,22 +120,32 @@ body {
     transform: translateY(100%);
     transition: transform 0.3s ease-in;
     z-index: 10550;
-    padding: 12px;
+    padding: 20px 12px;
     color: white;
 }
 
 .slider .header {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .slider .header h1 {
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
 }
 
 .slider .overview__body {
     font-size: 25px;
     overflow: auto;
     max-height: 400px;
+    margin: 0;
+    font-weight: 400;
+
+}
+
+@media (min-height: 740px) {
+    .slider .overview__body {
+        max-height: 550px;
+    }
 }
 
 @media(max-height: 600px) {
@@ -154,13 +165,21 @@ body {
 
 .price__item .price {
     font-weight: bold;
+    text-align: center;
 }
 
 .price__item .time {
     font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
+.time_svg {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
 
 .slider .background {
     position: absolute;
@@ -183,6 +202,8 @@ body {
     padding: 20px 20px;
 }
 
+
+
 @media(max-height: 600px) {
     .slider .overview__body {
         max-height: 250px;
@@ -201,6 +222,13 @@ body {
         margin: 0;
     }
 
+    .time span {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
 
     .slider__card h1 {
         font-size: 20px;
@@ -258,6 +286,22 @@ body {
     margin-top: 50px;
 }
 
+@media(max-height: 740px) {
+    .title__header {
+        margin: 0;
+    }
+
+    .title__image {
+        width: 250px;
+    }
+}
+
+@media (max-height: 667px) {
+    .last__button {
+        margin-top: 20px;
+    }
+}
+
 @media(max-height: 600px) {
     .last__button {
         margin-top: 20px;
@@ -275,6 +319,7 @@ body {
         margin-bottom: 0;
     }
 }
+
 
 /*preview*/
 
