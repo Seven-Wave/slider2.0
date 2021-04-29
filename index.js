@@ -21,12 +21,21 @@ $(document).ready(function (){
         $('.overview').css({
             'transform': 'translateY(0)'
         })
+
+        $(this).css({
+            'opacity' : '0'
+        })
+
     })
 
 
     $('.close').click(function () {
         $('.overview').css({
             'transform': 'translateY(100%)'
+        })
+
+        $('.slider__card').css({
+            'opacity' : '1'
         })
     })
 
